@@ -1,0 +1,168 @@
+\documentclass[12pt, a4paper, oneside, fontset=windows]{ctexart}
+\usepackage{amsmath, amsthm, amssymb, appendix, bm, ctex, graphicx, hyperref, mathrsfs, fancyhdr, geometry, float}
+\usepackage{cite}
+\usepackage{listings}
+\usepackage{epstopdf}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{appendix}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{threeparttable}
+\usepackage{setspace}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}%Times New Roman字体
+\usepackage{titletoc}
+\usepackage{fontspec}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{etoolbox}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{array}
+\usepackage{zhlipsum}
+
+\geometry{left=2.5cm} 
+\geometry{right=2.5cm} 
+\geometry{top=3.5cm} 
+\geometry{bottom=2.5cm} 
+
+
+\pagenumbering{arabic}%设置页码格式，大写字母标页
+\pagestyle{fancy}
+\fancyhead{} % 初始化页眉
+\fancyhead[CO,CE]{浙江财经大学课程作业}
+\fancyfoot{} % 初始化页脚
+\fancyfoot[CO,CE]{\thepage}
+%\fancyfoot[LO]{}
+%\fancyfoot[LE]{}
+%\fancyfoot[RO]{}
+%\fancyfoot[RE]{}
+% 设置页眉页脚横线及样式
+%页眉线宽，设为0可以去页眉线
+\renewcommand{\headrulewidth}{0.3mm} 
+%页脚线宽，设为0可以去页眉线
+\renewcommand{\footrulewidth}{0.0mm} 
+
+\title{\textbf{为何浙财没有LaTex模板}}
+\author{大鹅}
+\date{\today}
+\linespread{1.5}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{definition}[theorem]{定义}
+\newtheorem{lemma}[theorem]{引理}
+\newtheorem{corollary}[theorem]{推论}
+\newtheorem{example}[theorem]{例}
+\newtheorem{proposition}[theorem]{命题}
+\renewcommand{\abstractname}{\Large\textbf{摘要}}
+
+\begin{document}
+
+\newcommand\dunderline[3][-1pt]{{%
+  \setbox0=\hbox{#3}
+  \ooalign{\copy0\cr\rule[\dimexpr#1-#2\relax]{\wd0}{#2}}}}
+
+
+  \begin{titlepage}
+    \vspace*{25mm}
+    \centering
+  
+    \includegraphics[scale = 1.1]{title.png}
+  
+    \vspace{5mm}
+  
+    \zihao{4}\textbf{{ZHEJIANG UNIVERSITY OF FINANCE AND ECONOMICS}}
+  
+    \vspace{10mm}
+  
+    \zihao{0}\textbf{\lishu{课程论文}}
+  
+    \vspace{5mm}
+  
+  %  \begin{spacing}{1.2}
+  %    \LARGE\selectfont{\textbf{\heiti ——我是小标题}}
+  %  \end{spacing}
+  
+    \vspace{35mm}
+  
+    \flushleft
+    \begin{spacing}{1.3}
+    
+      \hspace{27mm}\LARGE\selectfont{\textbf{\heiti 课程名称：}\dunderline[-3pt]{1pt}{\makebox[78mm][c]{\kaishu 经济学导论}}}
+  
+      \hspace{27mm}\LARGE\selectfont{\textbf{\heiti 论文题目：}\dunderline[-3pt]{1pt}{\makebox[78mm][c]{\kaishu 为何浙财没有LaTex模板}}}
+
+      \hspace{27mm}\LARGE\selectfont{\textbf{\heiti 作者姓名：}\dunderline[-3pt]{1pt}{\makebox[78mm][c]{\kaishu 大鹅}}}
+  
+      \hspace{27mm}\LARGE\selectfont{\textbf{\heiti 专\hspace{14mm}业：}\dunderline[-3pt]{1pt}{\makebox[78mm][c]{\kaishu 经济学}}}
+  
+      \hspace{27mm}\LARGE\selectfont{\textbf{\heiti 学\hspace{14mm}号：}\dunderline[-3pt]{1pt}{\makebox[78mm][c]{1145141919810}}}
+      
+      \hspace{27mm}\LARGE\selectfont{\textbf{\heiti 任课教师：}\dunderline[-3pt]{1pt}{\makebox[78mm][c]{\kaishu 萨缪尔森}}}
+
+      \hspace{27mm}\LARGE\selectfont{\textbf{\heiti 完成时间：}\dunderline[-3pt]{1pt}{\makebox[78mm][c]{1919.8.10}}}
+        
+    \end{spacing}
+  
+    \vspace{25mm}
+  
+  \end{titlepage}
+
+
+\maketitle
+\setcounter{page}{0}
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+    \kaishu 浙财在浙江录取分数线耻辱性的大败已经成为了同学们讨论的话题，
+    “输完工商输理工，再接下来输杭师大，接下去没人输了。”一向直言的老学长
+    说道。“那么说浙财是备战本降专最早的大学？”“太好了，接下来要输金融职业学院了。”
+    \par\textbf{关键词：} \heiti 浙财; 输; 赢; 麻了. 
+\end{abstract}
+
+\newpage
+\pagenumbering{Roman}
+%\setcounter{page}{1}
+\tableofcontents
+\newpage
+%\setcounter{page}{1}
+\pagenumbering{arabic}
+
+
+\section{前言}
+这是section\cite{ref1}这是尾注，参考文献用的
+
+\paragraph{}
+这是段落，分段用的
+
+\subsection{小标题名字}
+这是subsection，分小点用的
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.6]{title.png}
+    \caption{学校图标\protect\footnotemark}
+    \end{figure} 
+\footnotetext{数据来自浙财官网}
+标注图片引用、标题用的
+
+\section{后记}
+好了，你可以开始写课程论文了，祝好！
+
+
+\newpage
+\bibliography{BE}
+\begin{thebibliography}{99}
+    \bibitem{ref1}浙财2022分数线
+\end{thebibliography}
+
+%\newpage
+
+%\begin{appendices}
+    %\renewcommand{\thesection}{\Alph{section}}
+    %\section{附录标题}
+        %这里是附录. 
+%\end{appendices}
+
+\end{document}
